@@ -1,0 +1,18 @@
+
+Ein DBMS (Datenbank Managagement System) kann viele verschiedene Datenbanken verwalten.
+Ein Datenbankschema ist der Überbegriff für ein DBMS+Datenbank
+
+
+create table Mitarbeiter(mitarbeiter_id integer NOT NULL, vorname varchar(50), nachname varchar(50), wohnort varchar(50));
+insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (1, "Max", "Mustermann", "Berlin");
+insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (2, "Fridolin", "Froehlich", "Koeln");
+insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (3, "Sina", "Sinko", "Wien");
+insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (4, "Hannah", "Heinz", "Dresden");
+
+-- Your code here!
+
+update Mitarbeiter set vorname="Klara" where vorname="Sina";
+select vorname, nachname FROM Mitarbeiter WHERE mitarbeiter_id < 3;
+insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (5, "Linus", "Lach", "Leipzig");
+Delete FROM Mitarbeiter WHERE mitarbeiter_id =2;
+select * from Mitarbeiter;
