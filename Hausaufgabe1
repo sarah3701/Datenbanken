@@ -1,6 +1,8 @@
 
-Ein DBMS (Datenbank Managagement System) kann viele verschiedene Datenbanken verwalten.
-Ein Datenbankschema ist der Überbegriff für ein DBMS+Datenbank
+Ein DBMS (Datenbank Managagement System) ist die Verwaltungsoftware und kann viele verschiedene Datenbanken verwalten.
+Ein Datenbankschema legt fest welche Daten mit welchen Relationen in den Tabellen gespeichert werden sollen.
+Integritätsbedingungen sorgen dafür, dass keine fehlerhaften Relationen entstehen können, so können Felder als 
+einzigartige Primary Keys oder als foreign Keys belegt werden oder durch NOT NULL gekennzeichnet werden.
 
 
 create table Mitarbeiter(mitarbeiter_id integer NOT NULL, vorname varchar(50), nachname varchar(50), wohnort varchar(50));
@@ -9,7 +11,6 @@ insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (2, "F
 insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (3, "Sina", "Sinko", "Wien");
 insert into Mitarbeiter(mitarbeiter_id,vorname, nachname, wohnort) values (4, "Hannah", "Heinz", "Dresden");
 
--- Your code here!
 
 update Mitarbeiter set vorname="Klara" where vorname="Sina";
 select vorname, nachname FROM Mitarbeiter WHERE mitarbeiter_id < 3;
